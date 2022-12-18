@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호그와트 입학처</title>
+    <link rel="stylesheet" href="style.css" />
+    <!--bootstrap cdn 불러오기-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <!--구글 폰트 불러오기: Black+Han+Sans, Jua&display-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="page-top">
+    <!--ㄴ"page-top" 네비바와 연동(상단이동)-->
+    <!-------------------------- &&네비게이션바&& --------------------------->
+    <nav class="navbar-wrap">
+      <nav class="navbar">
+        <div class="navbar_logo">
+          <a href="#page-top"
+            ><img
+              src="./images/logo-removebg.png"
+              class="nav_logo"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <ul id="navbar_menu">
+          <li><a href="#campus">Campus</a></li>
+          <li><a href="#class">Class</a></li>
+          <li><a href="#professor">Professor</a></li>
+          <li><a href="#student">Student</a></li>
+        </ul>
+        <a href="#" class="navbar_toggleBtn">
+          <i><img src="./images/menu.png" width="50px" height="50px" /></i>
+        </a>
+      </nav>
+      <div class="overlay"></div>
+      <!--ㄴ햄버거바 닫기용 레이어-->
+    </nav>
+    <!------------------------------ &&헤더&& ------------------------------->
+    <header>
+      <div class="header-wrap">
+        <div class="header-inner">
+          <h1 class="text-center">
+            <span class="text-1">2023년 호그와트 입학설명회에</span><br /><span
+              class="text-2"
+              >당신을 초대합니다</span
+            ><br /><span class="text-3"
+              >일시: 2022.12.19 오후 2시 | 장소: 호그와트 대강당</span
+            >
+          </h1>
+        </div>
+
+        <img src="./images/logo-removebg.png" class="logo" alt="logo" />
+      </div>
+    </header>
+    <!----------------------------- &&콘텐츠&& ------------------------------>
+    <content>
+      <section id="campus">
+        <!--부트스트랩 그리드 사용, 반응형-->
+        <div class="container">
+          <h2>Campus</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+            <div class="col">
+              <img src="./images/campus1.jpg" class="p-2" alt="logo" />
+            </div>
+            <div class="col">
+              <img src="./images/campus2.jpg" class="p-2" alt="logo" />
+            </div>
+            <div class="col">
+              <img src="./images/campus4.jpg" class="p-2" alt="logo" />
+            </div>
+            <div class="col">
+              <img src="./images/campus5.jpg" class="p-2" alt="logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="class">
+        <!--부트스트랩 그리드 사용, 반응형-->
+        <div class="container">
+          <h2>Class</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+            <div class="col">
+              <img src="./images/class1.jpg" class="p-2" alt="logo" />
+            </div>
+            <div class="col">
+              <img src="./images/class2.jpg" class="p-2" alt="logo" />
+            </div>
+            <div class="col">
+              <img src="./images/class3.jpg" class="p-2" alt="logo" />
+            </div>
+            <div class="col">
+              <img src="./images/class4.jpg" class="p-2" alt="logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="professor">
+        <!--부트스트랩 캐러셀 사용-->
+        <h2>Professor</h2>
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-bs-ride="false"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="5"
+              aria-label="Slide 6"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="6"
+              aria-label="Slide 7"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="7"
+              aria-label="Slide 8"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./images/prof1.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>덤블도어</h5>
+                <p>교장</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./images/prof2.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>맥고나걸</h5>
+                <p>교감</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./images/prof3.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>스네이프</h5>
+                <p>어둠의 마법 방어술</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./images/prof4.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>후치</h5>
+                <p>빗자루 비행술</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./images/prof5.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>해그리드</h5>
+                <p>신비한 동물</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./images/prof6.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>포모나</h5>
+                <p>약초학</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./images/prof7.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>트릴로니</h5>
+                <p>점성술</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./images/prof8.png" class="d-block w-20" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>무디</h5>
+                <p>방어술</p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <section id="student">
+        <h2>Student</h2>
+        <div class="flex-box-wrap">
+          <button id="slideLeft" type="button"></button>
+          <div class="flex-box">
+            <div class="box"><img src="./images/student1.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student2.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student3.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student4.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student5.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student6.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student7.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student8.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student9.jpg" alt="" /></div>
+            <div class="box"><img src="./images/student10.jpg" alt="" /></div>
+          </div>
+          <button id="slideRight" type="button"></button>
+        </div>
+      </section>
+    </content>
+    <!----------------------------- &&푸터&& ------------------------------>
+    <footer>
+      <div class="footer-wrap">
+        <nav>
+          <a href="" target="_blank">개인정보처리방침</a>
+          <span>|</span>
+          <a href="" target="_blank">이메일무단수집거부</a>
+        </nav>
+        <p>
+          <span class="footer-mail">Mail : hogwart@gmail.com</span
+          ><span>|</span>
+          <span class="footer-tel">Tel : 010-0000-0000</span>
+        </p>
+        <p>
+          <span class="footer-copyright"
+            >Copyright 2023 Hogwart All Rights Reserved.</span
+          >
+          <span><img src="./images/insta.png" width="50px" /></span>
+          <span><img src="./images/twitter.png" width="50px" /> </span>
+        </p>
+      </div>
+    </footer>
+    <!-----------------------&&하단고정바(신청하기)&& ---------------------->
+    <section id="apply">
+      <div id="apply-wrap">
+        <div class="apply-div">
+          <label for="name">입학설명회 신청</label>
+          <input type="text" name="name" id="name" placeholder="성함" />
+          <input type="tel" id="phone" placeholder="연락처" />
+        </div>
+        <div class="apply-div">
+          <label for="info"
+            ><input type="checkbox" id="info" /> 개인정보처리방침 동의
+            <a href="#" target="_blank">자세히</a></label
+          >
+          <button id="applybtn" type="button" class="btn btn-warning">
+            신청하기
+          </button>
+        </div>
+      </div>
+    </section>
+    <!---------------------&&팝업창(신청하기와 연동)&& ---------------------->
+    <!--부트스트랩 모달 사용-->
+    <div id="mymodal" class="modal modal-sm" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

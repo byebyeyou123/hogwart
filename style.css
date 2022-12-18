@@ -1,0 +1,431 @@
+html,
+body {
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/*-------------------------- &&네비게이션바&& ---------------------------*/
+
+.navbar-wrap {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  background-color: black;
+  padding: 8px 150px;
+}
+.nav_logo {
+  margin-left: 20px;
+  width: 50px;
+}
+
+.navbar a:link,
+.navbar a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+#navbar_menu li a:hover {
+  color: #996ba4;
+}
+#navbar_menu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  padding-left: 0px;
+}
+#navbar_menu li {
+  padding: 8px 50px;
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 20px;
+}
+
+/* 햄버거바 */
+.navbar_toggleBtn {
+  color: white;
+  position: absolute;
+  right: 15px;
+  font-size: 20px;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* background: green; */
+  z-index: 1;
+  display: none;
+}
+
+/* 햄버거바 반응형(900px 이하)*/
+@media screen and (max-width: 900px) {
+  .navbar {
+    align-items: flex-start;
+  }
+  #navbar_menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  #navbar_menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar_toggleBtn {
+    display: block;
+    position: fixed;
+    top: 10px;
+  }
+}
+
+/* 햄버거바 반응형(901px 이상)*/
+@media screen and (min-width: 901px) {
+  .navbar_toggleBtn {
+    display: none;
+  }
+}
+
+/* 햄버거바 자바스크립트 실행 */
+@media screen and (max-width: 900px) {
+  #navbar_menu.active {
+    display: flex;
+  }
+}
+
+/*------------------------------ &&헤더&& -------------------------------*/
+
+.header-wrap {
+  box-sizing: border-box;
+  padding-top: 180px;
+  width: 100%;
+  height: 500px;
+  background: url("./images/header2.png") no-repeat fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+.header-inner {
+  width: 100%;
+  padding-top: 80px;
+}
+h1 {
+  font-size: 50px;
+  font-family: "Black Han Sans", sans-serif;
+  color: transparent;
+}
+h2 {
+  padding-top: 5px;
+  font-family: "Black Han Sans", sans-serif;
+  color: white;
+  text-align: center;
+}
+
+/*text 나타나는 애니메이션 적용 text1, 2, 3가 순차적으로 나타남, 기본 지연시간 1s*/
+
+header .text-1 {
+  animation-name: header-font;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+header .text-2 {
+  animation-name: header-font;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+header .text-3 {
+  font-size: 25px;
+  animation-name: header-font;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+/*logo 나타나고 회전하는 애니메이션 적용(텍스트 나타나기 이후 실행)*/
+
+header .logo {
+  width: 70px;
+  position: relative;
+  top: -120px;
+  transform: scale(0);
+  animation-name: header-img;
+  animation-duration: 3s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes header-font {
+  from {
+    color: transparent;
+    opacity: 0;
+  }
+  to {
+    color: white;
+    opacity: 1;
+    text-shadow: 6px 6px 2px black;
+  }
+}
+
+@keyframes header-img {
+  0% {
+    transform: scale(0);
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1);
+    transform: rotate(360deg);
+    opacity: 0.5;
+    top: -120px;
+  }
+  100% {
+    transform: scale(1);
+    transform: rotate(360deg);
+    top: -250px;
+  }
+}
+
+/*헤더 반응형 구현*/
+
+@media screen and (max-width: 768px) {
+  .header-inner {
+    padding-top: 110px;
+  }
+
+  .header-inner p {
+    font-size: 30px;
+  }
+  header .logo {
+    width: 70px;
+    position: relative;
+  }
+  header .text-3 {
+    font-size: 20px;
+  }
+}
+
+/*----------------------------- &&콘텐츠&& ------------------------------*/
+
+/****************캠퍼스&클래스********************/
+
+section {
+  background-color: black;
+}
+.container {
+  padding-top: 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: "Black Han Sans", sans-serif;
+}
+
+.row img {
+  width: 330px;
+  height: 230px;
+}
+
+#professor img {
+  width: 300px;
+  height: 400px;
+  margin: 0px auto;
+}
+
+/*반응형 구현 - 이미지 사이즈 조절*/
+
+@media screen and (min-width: 992px) and (max-width: 1400px) {
+  #campus .row img,
+  #class .row img {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 770px) {
+  #campus .row img,
+  #class .row img {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+/********************교수**********************/
+
+.carousel {
+  padding-top: 40px;
+}
+
+h5 {
+  color: white;
+}
+
+#professor h2,
+#student h2 {
+  padding-top: 150px;
+}
+
+/********************학생**********************/
+
+.flex-box-wrap {
+  display: flex;
+  text-align: center;
+}
+
+.flex-box {
+  display: flex;
+  background-color: black;
+  margin: 40px auto;
+  margin-bottom: 0px;
+  flex-direction: row; /* 왼쪽에서 오른쪽으로 */
+  width: 90%;
+  height: 220px;
+  overflow-x: scroll; /* x축 스크롤되도록함 */
+  justify-content: space-between;
+}
+.flex-box::-webkit-scrollbar {
+  display: none;
+} /* 스크롤바 감추기, 대신 버튼으로 구현 */
+
+.flex-box .box {
+  background-color: black;
+  padding-right: 20px;
+}
+.flex-box .box:last-child {
+  padding-right: 0px;
+}
+.flex-box .box img {
+  width: 200px;
+  height: 200px;
+}
+
+/*버튼 L,R*/
+
+#slideLeft {
+  background: url("./images/left_b.png") no-repeat;
+  position: relative;
+  top: 110px;
+  border: transparent;
+  padding-left: 50px;
+}
+#slideLeft:hover {
+  background: url("./images/left_w1.png") no-repeat;
+  position: relative;
+  top: 112px;
+  right: 1px;
+}
+
+#slideRight {
+  background: url("./images/right_b.png") no-repeat;
+  position: relative;
+  top: 115px;
+  border: transparent;
+  padding-right: 50px;
+}
+#slideRight:hover {
+  background: url("./images/right_w1.png") no-repeat;
+  position: relative;
+  top: 113px;
+  left: 7px;
+}
+
+/*----------------------------- &&푸터&& ------------------------------*/
+
+footer {
+  width: 100%;
+  height: 200px;
+  /* bottom: 0px; */
+  /* position: absolute; */
+  color: gray;
+  font-size: 17px;
+  background-color: black;
+  padding-top: 200px;
+
+  text-align: center;
+}
+
+.footer-wrap {
+  padding-bottom: 200px;
+}
+
+footer a {
+  display: inline-block;
+  padding: 5px;
+  color: gray;
+  font-size: 15px;
+}
+footer a:visited {
+  color: gray;
+}
+footer p {
+  background-color: black;
+  margin: 0px;
+}
+footer p span {
+  display: inline-block;
+  margin: 5px;
+}
+footer img {
+  width: 30px;
+}
+
+/*-----------------------&&하단고정바(신청하기)&& ----------------------*/
+#apply label {
+  color: white;
+}
+#apply-wrap {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #1b1b2d;
+  text-align: center;
+  z-index: 2;
+}
+#apply div {
+  display: inline-block;
+  color: white;
+  padding: 10px;
+}
+#apply label,
+#apply input,
+#apply a {
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  #name,
+  #phone {
+    width: 130px;
+  }
+}
+
+/*---------------------&&팝업창(신청하기와 연동)&& ----------------------*/
+
+.modal-body {
+  font-family: "Jua", sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: #1b1b2d;
+}
+
+#mymodal {
+  opacity: 0.8;
+}
+.modal-dialog {
+  background-color: black;
+}
